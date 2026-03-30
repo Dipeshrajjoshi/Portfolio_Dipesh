@@ -470,8 +470,187 @@ nav {
 .edu-card .degree { color: var(--text-dim); }
 .edu-card .duration { color: var(--primary-color); font-size: 0.9rem; font-family: 'Courier New', monospace; }
 
+/* ── Academic Research ─────────────────────────────── */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2rem;
+}
+
+.research-card {
+    background: #ffffff;
+    border: 1px solid var(--surface-border);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 14px rgba(26, 110, 245, 0.06);
+    transition: var(--transition);
+    will-change: transform;
+    display: flex;
+    flex-direction: column;
+}
+
+.research-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-color);
+    box-shadow: 0 12px 35px var(--primary-glow);
+}
+
+.research-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 1.5rem;
+    background: linear-gradient(135deg, rgba(26,110,245,0.06), rgba(15,79,199,0.04));
+    border-bottom: 1px solid var(--surface-border);
+}
+
+.research-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--primary-glow);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
+.research-badge {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    background: rgba(26, 110, 245, 0.1);
+    border: 1px solid rgba(26, 110, 245, 0.25);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.03em;
+}
+
+.research-card-body {
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.research-card-body h3 {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.research-card-body p {
+    color: var(--text-dim);
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 1rem;
+}
+
+.research-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.82rem;
+    color: var(--text-dim);
+}
+
+.research-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.research-meta i {
+    color: var(--primary-color);
+}
+
+.research-card-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--surface-border);
+}
+
+.research-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.research-link:hover {
+    gap: 0.8rem;
+    opacity: 0.8;
+}
+
+/* ── Resume CTA ────────────────────────────────────── */
+.resume-section {
+    padding: 60px 0;
+}
+
+.resume-cta {
+    background: linear-gradient(135deg, rgba(26,110,245,0.06), rgba(15,79,199,0.04));
+    border: 1px solid rgba(26,110,245,0.2);
+    border-radius: 20px;
+    padding: 3rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.resume-cta-text h2 {
+    font-size: 2rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+    font-family: 'Courier New', monospace;
+    color: var(--primary-color);
+}
+
+.resume-cta-text p {
+    color: var(--text-dim);
+    max-width: 500px;
+}
+
+.resume-btn {
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1rem;
+    padding: 1rem 2.5rem;
+}
+
+/* Dark mode overrides for research/resume */
+body[data-theme="dark"] .research-card {
+    background: #111827;
+}
+
+body[data-theme="dark"] .research-card-header {
+    background: rgba(76, 201, 240, 0.05);
+}
+
+body[data-theme="dark"] .resume-cta {
+    background: rgba(76, 201, 240, 0.04);
+    border-color: rgba(76,201,240,0.15);
+}
+
+@media (max-width: 768px) {
+    .resume-cta {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Projects */
 .project-grid {
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
