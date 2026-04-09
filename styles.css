@@ -40,6 +40,11 @@ body {
     font-family: var(--font-main);
     line-height: 1.6;
     overflow-x: hidden;
+    cursor: none; /* Hide default mouse */
+}
+
+a, button, input, textarea, .theme-toggle, .menu-toggle, .skill-tag, .nav-links a {
+    cursor: none !important;
 }
 
 .container {
@@ -950,6 +955,171 @@ body[data-theme="dark"] .nav-links.active {
 
 /* Smooth transition when switching themes */
 body, header, .timeline-content, .edu-card, .project-card,
-.form-group input, .form-group textarea, footer {
+.form-group input, .form-group textarea, footer, .cert-item {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
+
+/* ── Global Cursor Hide ── */
+body, a, button, input, textarea {
+    cursor: none !important;
+}
+
+/* ── Custom Cursor ── */
+.cursor-follower {
+    width: 45px;
+    height: 45px;
+    background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(1px);
+    box-shadow: 0 0 15px var(--primary-glow);
+    transition: width 0.3s ease, height 0.3s ease, background 0.3s ease, opacity 0.3s ease;
+    will-change: transform;
+}
+
+.cursor-coords {
+    font-family: 'Courier New', monospace;
+    font-size: 8px;
+    font-weight: 800;
+    color: var(--primary-color);
+    text-align: center;
+    line-height: 1.1;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.9;
+    text-shadow: 0 0 5px var(--primary-glow);
+}
+
+.cursor-follower.hover {
+    width: 65px;
+    height: 65px;
+    background: radial-gradient(circle, var(--primary-glow) 0%, transparent 90%);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 30px var(--primary-glow);
+}
+
+
+/* ── Skill Categories ── */
+.skill-category {
+    margin-bottom: 2rem;
+}
+
+.skill-category strong {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: var(--text-main);
+    font-size: 1rem;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+/* ── Education Courses ── */
+.edu-courses {
+    margin-top: 1.2rem;
+    padding-left: 0;
+    list-style: none !important;
+}
+
+.edu-courses li {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.edu-courses li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* ── Project Date & Header ── */
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-date {
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* ── Certificates List ── */
+.cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 900px;
+}
+
+.cert-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    background: #ffffff;
+    border: 1px solid var(--surface-border);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(26, 110, 245, 0.04);
+    transition: var(--transition);
+}
+
+.cert-item:hover {
+    transform: translateX(10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 25px var(--primary-glow);
+}
+
+.cert-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+    color: var(--text-main);
+}
+
+.cert-info p {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+}
+
+.cert-date {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    color: var(--primary-color);
+    background: var(--primary-glow);
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+/* ── Dark Mode for New Content ── */
+body[data-theme="dark"] .cert-item {
+    background: #111827;
+}
+
+@media (max-width: 600px) {
+    .cert-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+}
+

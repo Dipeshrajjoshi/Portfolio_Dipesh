@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.section, .project-card, .edu-card, .timeline-item').forEach(el => {
+    document.querySelectorAll('.section, .project-card, .edu-card, .timeline-item, .cert-item').forEach(el => {
         el.classList.add('reveal');
         revealObserver.observe(el);
     });
@@ -121,5 +121,48 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.textContent = originalText;
             showToast('✅ Message sent successfully!');
         }, 1500);
+    });
+
+    // ── Magic Ball Cursor ──────────────────────────────────────
+    const follower = document.querySelector('.cursor-follower');
+    const coords = document.querySelector('.cursor-coords');
+
+    let mouseX = 0, mouseY = 0;
+    let followX = 0, followY = 0;
+
+    let isVisible = false;
+
+    document.addEventListener('mousemove', (e) => {
+        if (!isVisible) {
+            follower.style.opacity = '1';
+            isVisible = true;
+        }
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        
+        coords.innerHTML = `X: ${Math.round(mouseX)}<br>Y: ${Math.round(mouseY)}`;
+    });
+
+    function animateCursor() {
+        // Snappy interpolation for one-cursor feel
+        followX += (mouseX - followX) * 0.18;
+        followY += (mouseY - followY) * 0.18;
+        follower.style.transform = `translate3d(${followX}px, ${followY}px, 0)`;
+
+        requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Hover states
+    const hoverTargets = document.querySelectorAll('a, button, .skill-tag, .theme-toggle, .menu-toggle, .research-link, .project-links a');
+    hoverTargets.forEach(target => {
+        target.addEventListener('mouseenter', () => follower.classList.add('hover'));
+        target.addEventListener('mouseleave', () => follower.classList.remove('hover'));
+    });
+
+    // Hide cursor when leaving window
+    document.addEventListener('mouseleave', () => {
+        follower.style.opacity = '0';
+        isVisible = false;
     });
 });

@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+    <div class="cursor-follower">
+        <div class="cursor-coords">X: 0, Y: 0</div>
+    </div>
 
     <header>
         <nav class="container">
@@ -24,6 +25,7 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#research">Research</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
@@ -60,23 +62,59 @@
                 <div class="about-grid">
                     <div class="about-text">
                         <p>
-                            I am a graduate student pursuing a Master of Applied Computing at the University of Windsor. I have a strong passion for software development, quality assurance, and cloud/DevOps.
+                            Master's student in Applied Computing at University of Windsor with strong interest in Software Development, Cloud Computing, and DevOps. Hands-on experience building full-stack applications using Java, Python, Django, and modern web technologies.
                         </p>
                         <p>
-                            My foundation is built on Java, Python, and Django, with a keen interest in engineering efficient REST APIs and implementing test automation frameworks. I am currently actively seeking a Summer 2026 Co-op opportunity where I can apply my skills to solve real-world problems.
+                            Seeking co-op or entry-level roles to gain Canadian industry experience and contribute to scalable software systems.
                         </p>
                         <div class="skills-summary">
-                            <h3>Core Technologies</h3>
-                            <div class="skills-grid" id="skills-grid">
-                                <!-- Skills will be injected or hardcoded here -->
-                                <span class="skill-tag">Java</span>
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">Django</span>
-                                <span class="skill-tag">JavaScript</span>
-                                <span class="skill-tag">REST APIs</span>
-                                <span class="skill-tag">DevOps</span>
-                                <span class="skill-tag">Cloud Computing</span>
-                                <span class="skill-tag">PostgreSQL</span>
+                            <div class="skill-category">
+                                <strong>Languages:</strong>
+                                <div class="skills-grid">
+                                    <span class="skill-tag">Java</span>
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">SQL</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <strong>Backend:</strong>
+                                <div class="skills-grid">
+                                    <span class="skill-tag">Django</span>
+                                    <span class="skill-tag">Spring Boot</span>
+                                    <span class="skill-tag">REST APIs</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <strong>Development:</strong>
+                                <div class="skills-grid">
+                                    <span class="skill-tag">Flutter</span>
+                                    <span class="skill-tag">Next.js</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <strong>Cloud & DevOps:</strong>
+                                <div class="skills-grid">
+                                    <span class="skill-tag">AWS (basic)</span>
+                                    <span class="skill-tag">Docker</span>
+                                    <span class="skill-tag">CI/CD (learning)</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <strong>Tools:</strong>
+                                <div class="skills-grid">
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">GitHub</span>
+                                    <span class="skill-tag">Postman</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <strong>Concepts:</strong>
+                                <div class="skills-grid">
+                                    <span class="skill-tag">OOP</span>
+                                    <span class="skill-tag">Data Structures & Algorithms</span>
+                                    <span class="skill-tag">System Design basics</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -98,43 +136,41 @@
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
-                        <div class="timeline-date">Sep 2025 – Present</div>
+                        <div class="timeline-date">Jan 2026 – Mar 2026</div>
                         <div class="timeline-content">
-                            <h3>Data Entry</h3>
-                            <h4>Central Transport <span class="location">| Windsor, ON</span></h4>
-                            <p>Currently managing data workflows and ensuring data integrity for transport operations.</p>
+                            <h3>Software Developer (Contract)</h3>
+                            <h4>LSP Technologies Inc. <span class="location">| Ontario, Canada</span></h4>
+                            <ul>
+                                <li>Contributed as a contract-based developer at a formally registered Canadian startup, building web applications and backend systems across product development stages.</li>
+                                <li>Built RESTful APIs and integrated backend services to support core application features; contributed to system design and architecture planning.</li>
+                                <li>Wrote clean, maintainable code following modern engineering practices; participated in debugging, testing, and performance optimization in a remote environment.</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">May 2025 – Present</div>
                         <div class="timeline-content">
-                            <h3>Graduate Software Developer (Academic)</h3>
-                            <h4>University of Windsor</h4>
+                            <h3>Graduate Software Developer (Academic Projects)</h3>
+                            <h4>University of Windsor <span class="location">| Windsor, ON</span></h4>
                             <ul>
-                                <li>Developed and delivered 6+ end-to-end software projects across domains including fintech, travel analytics, machine learning, and cybersecurity.</li>
-                                <li>Built a Credit Card Comparison System to analyze and rank financial products based on rewards, fees, and user preferences, improving decision-making efficiency.</li>
-                                <li>Designed a Flight Analysis Platform to process and visualize airline data, identifying pricing trends and optimizing route insights using data-driven approaches.</li>
-                                <li>Implemented a Sentiment Analysis Model using NLP techniques to classify user-generated content, achieving high accuracy on real-world datasets.</li>
-                                <li>Engineered HackHub, a full-stack web platform using Django, enabling collaborative coding with authentication and REST APIs.</li>
-                                <li>Developed Dream Tale, a Flutter-based mobile application integrating backend APIs for dynamic storytelling experiences.</li>
-                                <li>Conducted research on BadNets (Backdoor Attacks in Neural Networks), analyzing vulnerabilities in deep learning models and documenting findings in a research-style technical report.</li>
-                                <li>Collaborated in team environments using Git, Agile practices, and modular design, simulating real-world software development workflows.</li>
-                                <li>Produced comprehensive technical documentation including architecture diagrams, design reports, and academic-style papers.</li>
+                                <li>Developed and delivered 6+ end-to-end software projects across fintech, travel analytics, machine learning, and cybersecurity domains.</li>
+                                <li>Built a Credit Card Comparison System and a Flight Analysis Platform to process and visualize financial and airline data, improving decision-making efficiency.</li>
+                                <li>Implemented a Sentiment Analysis Model using NLP techniques to classify user-generated content with high accuracy on real-world datasets.</li>
+                                <li>Researched BadNets (Backdoor Attacks in Neural Networks), analyzing deep learning vulnerabilities and documenting findings in a research-style technical report.</li>
+                                <li>Collaborated using Git, Agile practices, and modular design; produced architecture diagrams, design reports, and academic-style documentation.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
-                        <div class="timeline-date">Jan 2024 – June 2024</div>
+                        <div class="timeline-date">Jan 2024 – Jun 2024</div>
                         <div class="timeline-content">
-                            <h3>Undergraduate Researcher</h3>
+                            <h3>Undergraduate Research Student</h3>
                             <h4>DIT University <span class="location">| Dehradun, India</span></h4>
-                            <p>Conducted research on Parkinson's Disease Detection using Machine Learning algorithms.</p>
                             <ul>
-                                <li>Designed and implemented a Parkinson's Disease Detection program as part of a 6-month research initiative.</li>
-                                <li>Collaborated effectively within a team of 3 members to analyze complex datasets and refine model accuracy.</li>
-                                <li>Applied advanced Machine Learning techniques for predictive analysis and documented the research outcomes.</li>
+                                <li>Conducted 6-month research on Parkinson's Disease Detection using ML algorithms; collaborated in a team of 3 to analyze datasets and refine model accuracy.</li>
+                                <li>Applied advanced ML techniques for predictive analysis and documented research outcomes in a comprehensive technical report.</li>
                             </ul>
                         </div>
                     </div>
@@ -149,14 +185,21 @@
                     <div class="edu-card">
                         <div class="edu-icon"><i class="fas fa-university"></i></div>
                         <h3>University of Windsor</h3>
-                        <p class="degree">Master of Science - MS, Applied Computing</p>
-                        <p class="duration">May 2025 – Aug 2026 (Expected)</p>
+                        <p class="degree">Master of Applied Computing</p>
+                        <p class="duration">May 2025 – Present <span class="location">| Windsor, ON</span></p>
+                        <ul class="edu-courses">
+                            <li><strong>Courses:</strong> Advanced Software Engineering, Cloud Computing, Distributed Systems, Advanced Database Systems, Advanced System Programming, Intro to AI</li>
+                            <li>Open to Co-op or Internship opportunities (4–8 months) starting May 2026</li>
+                        </ul>
                     </div>
                     <div class="edu-card">
                         <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
-                        <h3>DIT UNIVERSITY</h3>
-                        <p class="degree">Bachelor of Technology - BTech, CSE</p>
-                        <p class="duration">Aug 2020 – Nov 2024</p>
+                        <h3>DIT University</h3>
+                        <p class="degree">Bachelor of Technology, Computer Science and Engineering</p>
+                        <p class="duration">Aug 2020 – Sep 2024 <span class="location">| Dehradun, India</span></p>
+                        <ul class="edu-courses">
+                            <li><strong>Courses:</strong> Data Structures & Algorithms, Operating Systems, Computer Networks, Software Engineering, Database Management Systems, Engineering Mathematics</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -171,14 +214,13 @@
                     <div class="research-card">
                         <div class="research-card-header">
                             <div class="research-icon"><i class="fas fa-plane"></i></div>
-                            <span class="research-badge">Data Engineering</span>
+                            <span class="research-badge">Aug 2025 – Dec 2025</span>
                         </div>
                         <div class="research-card-body">
                             <h3>Flight Performance Analytics: A Data Warehouse Approach</h3>
-                            <p>A comprehensive study on the design and implementation of a data warehouse for analyzing large-scale airline performance datasets. The research covers ETL pipelines, dimensional modeling, and OLAP queries to extract actionable insights on route efficiency, delays, and pricing trends.</p>
+                            <p>Conducted team-based research analyzing large-scale airline performance data via a structured data warehouse; designed ETL pipelines for data cleaning and transformation. Applied dimensional modeling and OLAP queries to extract insights on route efficiency and delays.</p>
                             <div class="research-meta">
-                                <span><i class="fas fa-users"></i> Team Research</span>
-                                <span><i class="fas fa-tag"></i> Data Warehouse, ETL, Analytics</span>
+                                <span><i class="fas fa-tag"></i> SQL, ETL Pipelines, Data Analytics</span>
                             </div>
                         </div>
                         <div class="research-card-footer">
@@ -191,13 +233,12 @@
                     <div class="research-card">
                         <div class="research-card-header">
                             <div class="research-icon"><i class="fas fa-brain"></i></div>
-                            <span class="research-badge">NLP / ML</span>
+                            <span class="research-badge">Aug 2025 – Dec 2025</span>
                         </div>
                         <div class="research-card-body">
                             <h3>Aspect-Based Sentiment Analysis on User-Generated Content</h3>
-                            <p>An NLP research paper exploring aspect-level sentiment classification techniques applied to real-world datasets. The study evaluates multiple transformer-based and classical models, comparing accuracy and F1-score on domain-specific text corpora.</p>
+                            <p>Conducted team-based research on fine-grained sentiment analysis, identifying sentiment at the aspect level. Evaluated transformer-based and classical ML models on real-world datasets using accuracy and F1-score metrics.</p>
                             <div class="research-meta">
-                                <span><i class="fas fa-users"></i> Team Research</span>
                                 <span><i class="fas fa-tag"></i> NLP, Sentiment Analysis, ML</span>
                             </div>
                         </div>
@@ -220,7 +261,7 @@
                         <h2>{ Resume }</h2>
                         <p>Looking for a motivated Graduate Software Developer for Summer 2026 Co-op? Download my resume for the full picture.</p>
                     </div>
-                    <a href="https://drive.google.com/file/d/17ves2kHK-2xzATWefHzEEzMsU0yP4NsU/view?usp=drive_link" target="_blank" class="btn btn-primary resume-btn">
+                    <a href="https://drive.google.com/file/d/1lTPxutJqLEG4i-w_J3Zx9PbPFWFLbguD/view?usp=sharing" target="_blank" class="btn btn-primary resume-btn">
                         <i class="fas fa-download"></i> Download Resume
                         
                     </a>
@@ -234,20 +275,61 @@
                 <div class="project-grid">
                     <div class="project-card">
                         <div class="project-img-placeholder">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3>Dhyaan / Focused E-Learning App</h3>
+                                <span class="project-date">Feb 2026 – Present</span>
+                            </div>
+                            <p>Designed a focused e-learning platform to reduce distractions and enable organized, self-paced learning. Developed full-stack architecture using Next.js for frontend and Django with Supabase for scalable backend, authentication, and real-time management.</p>
+                            <div class="project-tags">
+                                <span>Next.js</span>
+                                <span>Django</span>
+                                <span>Supabase</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Dipeshrajjoshi/DHYAAN" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img-placeholder">
                             <i class="fas fa-code"></i>
                         </div>
                         <div class="project-info">
-                            <h3>HackHub.coding</h3>
-                            <p>Full-stack web platform using Django enabling collaborative coding and content sharing with authentication and REST APIs. Features secure submission systems and real-time leaderboards.</p>
+                            <div class="project-header">
+                                <h3>Hackhub-Code / Competitive Interview Platform</h3>
+                                <span class="project-date">Jan 2026 – Apr 2026</span>
+                            </div>
+                            <p>Built a competitive interview platform to simulate real-world hiring environments. Architected a scalable backend and validation system to handle concurrent users and ensure reliable, transparent assessment outcomes.</p>
                             <div class="project-tags">
                                 <span>Django</span>
-                                <span>Python</span>
-                                <span>REST API</span>
-                                <span>PostgreSQL</span>
+                                <span>JavaScript</span>
+                                <span>SQLite</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/Dipeshrajjoshi/HackHub.coding" target="_blank"><i class="fab fa-github"></i></a>
-                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/Dipeshrajjoshi/HackHub.coding" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img-placeholder">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3>Dream Tale / AI Story Generation App</h3>
+                                <span class="project-date">Jan 2026 – Apr 2026</span>
+                            </div>
+                            <p>Built a cross-platform Flutter app that generates personalized fictional stories using OpenAI API. Backend powered by Supabase (PostgreSQL, authentication, edge functions) to enable automated storytelling workflows.</p>
+                            <div class="project-tags">
+                                <span>Flutter</span>
+                                <span>OpenAI API</span>
+                                <span>Supabase</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Dipeshrajjoshi" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -264,99 +346,101 @@
                                 <span>Fintech</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/Dipeshrajjoshi" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/Dipeshrajjoshi" target="_blank"><i class="fab fa-github"></i> Project Docs</a>
                             </div>
                         </div>
                     </div>
-                    <div class="project-card">
-                        <div class="project-img-placeholder">
-                            <i class="fas fa-plane"></i>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificates" class="certificates section">
+            <div class="container">
+                <h2 class="section-title">Certificates & Technical Training</h2>
+                <div class="cert-list">
+                    <div class="cert-item">
+                        <div class="cert-info">
+                            <h3>LambdaTest Test Automation Professional Certificate</h3>
+                            <p>LambdaTest</p>
                         </div>
-                        <div class="project-info">
-                            <h3>Flight Analysis Platform</h3>
-                            <p>Travel analytics platform to process and visualize airline data, identifying pricing trends and optimizing route insights using data-driven approaches and a data warehouse architecture.</p>
-                            <div class="project-tags">
-                                <span>Data Warehouse</span>
-                                <span>Python</span>
-                                <span>Visualization</span>
-                                <span>Analytics</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/Dipeshrajjoshi" target="_blank"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
+                        <div class="cert-date">Aug 2025</div>
                     </div>
-                    <div class="project-card">
-                        <div class="project-img-placeholder">
-                            <i class="fas fa-brain"></i>
+                    <div class="cert-item">
+                        <div class="cert-info">
+                            <h3>GitHub Actions: CI/CD Pipelines</h3>
+                            <p>Microsoft / LinkedIn</p>
                         </div>
-                        <div class="project-info">
-                            <h3>Sentiment Analysis Model</h3>
-                            <p>NLP-based machine learning model to classify user-generated content, achieving high accuracy on real-world datasets using advanced text preprocessing and classification pipelines.</p>
-                            <div class="project-tags">
-                                <span>NLP</span>
-                                <span>Python</span>
-                                <span>Machine Learning</span>
-                                <span>Scikit-learn</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/Dipeshrajjoshi" target="_blank"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
+                        <div class="cert-date">Jul 2025</div>
                     </div>
-                    <div class="project-card">
-                        <div class="project-img-placeholder">
-                            <i class="fas fa-mobile-alt"></i>
+                    <div class="cert-item">
+                        <div class="cert-info">
+                            <h3>Running Jenkins on AWS</h3>
+                            <p>LinkedIn</p>
                         </div>
-                        <div class="project-info">
-                            <h3>Dream Tale</h3>
-                            <p>Flutter-based mobile application integrating backend APIs to deliver dynamic storytelling experiences. Cross-platform app with rich UI and seamless real-time API communication.</p>
-                            <div class="project-tags">
-                                <span>Flutter</span>
-                                <span>Dart</span>
-                                <span>REST API</span>
-                                <span>Mobile</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/Dipeshrajjoshi" target="_blank"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
+                        <div class="cert-date">Jul 2025</div>
                     </div>
-                    <div class="project-card">
-                        <div class="project-img-placeholder">
-                            <i class="fas fa-shield-halved"></i>
+                    <div class="cert-item">
+                        <div class="cert-info">
+                            <h3>Selenium Essential Training</h3>
+                            <p>LinkedIn</p>
                         </div>
-                        <div class="project-info">
-                            <h3>BadNets — NN Security Research</h3>
-                            <p>Cybersecurity research analyzing backdoor attack vulnerabilities in deep learning models. Documented findings on attack vectors and defenses in a research-style technical report.</p>
-                            <div class="project-tags">
-                                <span>Cybersecurity</span>
-                                <span>Deep Learning</span>
-                                <span>PyTorch</span>
-                                <span>Research</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/Dipeshrajjoshi" target="_blank"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
+                        <div class="cert-date">May 2025</div>
                     </div>
-                    <div class="project-card">
-                        <div class="project-img-placeholder">
-                            <i class="fas fa-chart-line"></i>
+                    <div class="cert-item">
+                        <div class="cert-info">
+                            <h3>Registered Computer Engineer</h3>
+                            <p>Nepal Engineering Council</p>
                         </div>
-                        <div class="project-info">
-                            <h3>CoopDone</h3>
-                            <p>Co-op & Internship Application Tracker built with Vanilla JS and Chart.js. Helps students manage career applications with visual analytics and local storage persistence.</p>
-                            <div class="project-tags">
-                                <span>JavaScript</span>
-                                <span>Chart.js</span>
-                                <span>HTML/CSS</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#"><i class="fab fa-github"></i></a>
-                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                        <div class="cert-date">Jan 2025</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-info">
+                            <h3>Software Engineer Intern Certificate</h3>
+                            <p>HackerRank</p>
                         </div>
+                        <div class="cert-date">Jul 2024</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-info">
+                            <h3>Python Certificate</h3>
+                            <p>HackerRank</p>
+                        </div>
+                        <div class="cert-date">Jul 2024</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-info">
+                            <h3>Introduction to Containers (Docker, Kubernetes & OpenShift)</h3>
+                            <p>IBM</p>
+                        </div>
+                        <div class="cert-date">Apr 2023</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-info">
+                            <h3>Introduction to Git and GitHub</h3>
+                            <p>Google Cloud</p>
+                        </div>
+                        <div class="cert-date">May 2023</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-info">
+                            <h3>AWS Cloud Practitioner Essentials</h3>
+                            <p>Amazon Web Services</p>
+                        </div>
+                        <div class="cert-date">Jul 2022</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-info">
+                            <h3>SQL Certificate</h3>
+                            <p>HackerRank</p>
+                        </div>
+                        <div class="cert-date">Jul 2022</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-info">
+                            <h3>Java (Basic) Certificate</h3>
+                            <p>HackerRank</p>
+                        </div>
+                        <div class="cert-date">Apr 2022</div>
                     </div>
                 </div>
             </div>
